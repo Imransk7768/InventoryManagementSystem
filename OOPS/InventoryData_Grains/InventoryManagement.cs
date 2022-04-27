@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
-using OOPS.InventoryData_Grains;
 
-namespace OOPS
+namespace OOPS.InventoryData_Grains
 
 {
     public class InventoryManagement

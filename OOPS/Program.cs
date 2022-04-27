@@ -1,4 +1,6 @@
 ﻿using System;
+using OOPS.InventoryDataManagenemt_Grains;
+using OOPS.InventoryData_Grains;
 
 namespace OOPS
 {
@@ -8,15 +10,34 @@ namespace OOPS
         {
             Console.WriteLine(">>>>>  Welcome to INVENTORY MANAGEMENT System  <<<<<");
             const string INVENTORY_DATA_PATH = @"H:\Assignments\InventoryManagementSystem\OOPS\InventoryData_Grains\Inventory.json";
+            //const string INVENTORY_DATA_PATH = @"H:\Assignments\InventoryManagementSystem\OOPS\InventoryDataManagenemt_Grains\InventoryManage.json";
             InventoryManagement InData = new InventoryManagement();
-            Random random = new Random();
+            InventoryManager manager = new InventoryManager();
+            InventoryData InvData = new InventoryData();
+            Console.WriteLine("1. Display Data\n2. Add Data\n3. Edit Data \n-in Inventory");
             bool check = true;
             while (check)
             {
-                Console.WriteLine("1.Display Data");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case 1:
+                        InData.DisplayInventory(INVENTORY_DATA_PATH);
+                        break;
+                    case 2:
+                       Console.WriteLine("Add InventoryData & InventoryList");
+                        string inventory_Name = Console.ReadLine();
+                        Console.WriteLine("Enter Inventory Details : ");
+                        InventoryData data = new InventoryData();
+                        data.ItemName = Console.ReadLine();
+                        data.ItemWeight = Convert.ToInt32(Console.ReadLine());
+                        data.ItemPricePerKg = Convert.ToInt32(Console.ReadLine());
+                        manager.AddInventory(data, inventory_Name, INVENTORY_DATA_PATH);
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter the Inventory List Name & GrainsName : ");
+                        string inventoryName = Console.ReadLine();
+                        string item = Console.ReadLine();
+                        manager.EditInventory(inventoryName, item, INVENTORY_DATA_PATH);
                         InData.DisplayInventory(INVENTORY_DATA_PATH);
                         break;
                     default:
