@@ -1,0 +1,17 @@
+[
+  {
+    "StockName": "Google",
+    "NumOfShares": 50,
+    "ShareValue": 800
+  },
+  {
+    "StockName": "Samsung",
+    "NumOfShares": 25,
+    "ShareValue": 1000
+  },
+  {
+    "StockName": "Genpact",
+    "NumOfShares": 60,
+    "ShareValue": 600
+  }
+]
