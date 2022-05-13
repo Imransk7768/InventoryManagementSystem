@@ -1,0 +1,17 @@
+[
+  {
+    "ItemName": "Rice",
+    "ItemWeight": 10,
+    "ItemPricePerKg": 15
+  //},
+  //{
+  //  "ItemName": "Pulse",
+  //  "ItemWeight": 15,
+  //  "ItemPricePerKg": 20
+  //},
+  //{
+  //  "ItemName": "Wheat",
+  //  "ItemWeight": 20,
+  //  "ItemPricePerKg": 40
+  //}
+]
